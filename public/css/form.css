@@ -1,0 +1,29 @@
+.signin{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.signup{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: aliceblue;
+    font-size: 27px;
+    font-family: 'Raleway', sans-serif;
+    height: 300px;
+    border-radius: 5px;
+}
+.field{
+margin: 10px;
+border-radius: 8px;
+border: none;
+font-size: 20px;
+text-align: center;
+}

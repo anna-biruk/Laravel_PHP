@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "PlayfairDisplay-Regular";
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("ttf");
+}
+@font-face {
+    font-family: "Inconsolata-Regular";
+    src: url("../fonts/Inconsolata/Inconsolata-Regular.ttf");
+}

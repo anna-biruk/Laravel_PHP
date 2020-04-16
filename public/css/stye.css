@@ -1,0 +1,154 @@
+@import url("./fonts.css");
+@import url("./icomoon.css");
+
+.header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 50px;
+    width: 1080px;
+    margin: 0 auto;
+    
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: "Inconsolata-Regular";
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-family: "PlayfairDisplay-Regular";
+}
+
+.menu__item {
+    color: rgb(98, 98, 98);
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.image-container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.page {
+   
+    width: 900px;
+    margin: 0 auto;
+}
+
+.record {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.record__topic {
+    font-size: 14px;
+    color: #bdb7aa;
+}
+
+.record__title {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #626262;
+    margin-bottom: 30px;
+}
+
+.record__content {
+    color: #626262;
+    line-height: 25px;
+}
+
+.record__comment {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #bdb7aa;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    margin-top: 100px;
+}
+
+.post__topic {
+    font-size: 14px;
+    color: #bdb7aa;
+    margin-top: 30px;
+}
+
+.post__title {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #626262;
+    margin-bottom: 30px;
+}
+
+.post__content {
+    color: #626262;
+    line-height: 25px;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.post__image {
+    max-height: 316px;
+    width: 420px;
+    height: 316px;
+}
+
+.post:nth-child(even) {
+    margin-left: 60px;
+}
+.menu__item:last-child{
+    margin: 0px;
+
+}
+.menu_item_link{
+    color: rgb(98, 98, 98);
+    text-decoration: none;
+    
+}
+.footer-container{
+    background-color:rgb(240,240,240);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-top: 115px;
+}
+.footer {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.footer__title {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer__follow{
+    margin-left: auto;
+    cursor: default;
+}
+.footer__icon {
+    color: #626262;
+    margin-left: 17px;
+    cursor: pointer;
+}
+.dashboard{
+    text-align: end;
+    color: gray;
+}

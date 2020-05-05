@@ -2,8 +2,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/stye.css">
+    <link type="text/css" href="{{asset('/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <lin type='text/css' rel="stylesheet" href="{{asset('/css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/stye.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/home.css')}}">
+    @stack('styles')
 </head>
 
 <body>
@@ -43,7 +46,7 @@
         </ul>
     </div>
 
-    @yield('content')
+   
     
     <div class="image-container">
         <img src="./image/1.png">
@@ -120,6 +123,7 @@
                 </span>
 
             </div>
+            @yield('content')
     
     <div class="footer-container">
         <div class="footer">
@@ -133,6 +137,8 @@
             
         </div>
     </div>
+   
+    @stack('scripts')
 </body>
 
 </html>

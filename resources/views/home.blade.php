@@ -100,7 +100,9 @@
               <td>{{$item->name}}</td>
               <th>{{$item->body}}</th>
               <th>{{$item->price}}</th>
-              <th>Удалить/редактировать</th>
+              <th>Редактировать <br />
+                <a href="{{asset('product/delete/'.$item->id)}}" class="btn btn-block btn-default">
+                  Удалить</a></th>
             </tr>
             @endforeach
           </table>

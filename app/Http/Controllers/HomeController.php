@@ -44,5 +44,14 @@ class HomeController extends Controller
 
         return redirect()->back();
         }
+        public function getDelete($id=null){
+            //Product::where('id', $id)->delete();
+            $objs= Product::find($id);
+            @unlink(public_path().'/uploads/'.$objs->user_id.'/'.$objs->picture);
+            @unlink(public_path().'/uploads/'.$objs->user_id.'/s'.$objs->picture);
+            @unlink(public_path().'/uploads/'.$objs->user_id.'/ss'.$objs->picture);
+            $objs->delete();
+            return redirect('home');
+        }
         
 }

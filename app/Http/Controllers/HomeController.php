@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use Auth;
-
 class HomeController extends Controller
 {
     /**
@@ -26,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $objs = Product::where('user_id', Auth::user()->id)->orderBy('id','DESC')->paginate(10);
+        return view('home', compact('objs'));
+        
     }
     public function postIndex(ProductRequest $r){
         $r['picture'] = '';
@@ -38,7 +39,9 @@ class HomeController extends Controller
         if ($pic) {
             $r['picture'] = $pic;
         }
+       // Order::create ($r->all());
         Product::create($r->all());
+
         return redirect()->back();
         }
         

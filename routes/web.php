@@ -17,6 +17,9 @@ Route::get('/', 'BaseController@getIndex');
 Route::get('/login-form', 'BaseController@login');
 
 Auth::routes();
+//Ajax
+Route::post('/ajax/modal','Ajax\ModalController@postOne');
+//Others
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('home', 'HomeController@postIndex');

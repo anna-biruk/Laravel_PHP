@@ -1,6 +1,15 @@
 @extends('layouts.base')
 @push('styles')
 <link type="text/css" href="{{asset('/media/css/home.css')}}" rel="stylesheet" />
+<link href="{{asset('css/modal.css')}}" rel="stylesheet"/>
+@endpush
+<!-- Scripts -->
+
+@push('scripts')
+
+<script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{asset('js/modal.js')}}"></script>
 @endpush
 
 @section('content')
@@ -94,7 +103,7 @@
             @foreach($objs as $item)
             <tr>
               <th>
-                <img src="/uploads/20/ss_{{$item->picture}}" alt="">
+                <img src="/uploads/21/ss_{{$item->picture}}" alt="">
               </th>
 
               <td>{{$item->name}}</td>
@@ -102,7 +111,9 @@
               <th>{{$item->price}}</th>
               <th>Редактировать <br />
                 <a href="{{asset('product/delete/'.$item->id)}}" class="btn btn-block btn-default">
-                  Удалить</a></th>
+                  Удалить</a>
+                <a href="#" class="btn btn-block btn-primary show-modal" data-id="{{$item->id}}">Просмотр</a>
+              </th>
             </tr>
             @endforeach
           </table>

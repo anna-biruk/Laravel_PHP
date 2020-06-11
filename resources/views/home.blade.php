@@ -18,7 +18,6 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">Форма добавления товара</div>
-
         <div class="card-body">
           <form class="was-validated" action="{{asset('home')}}" method="post" enctype="multipart/form-data">
             @csrf
@@ -103,7 +102,8 @@
             @foreach($objs as $item)
             <tr>
               <th>
-                <img src="/uploads/21/ss_{{$item->picture}}" alt="">
+                <img src="/uploads/{{$item->user_id}}/ss_{{$item->picture}}" alt="">
+
               </th>
 
               <td>{{$item->name}}</td>

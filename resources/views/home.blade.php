@@ -10,6 +10,12 @@
 <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
 <script src="{{ asset('js/app.js') }}" defer></script>
 <script src="{{asset('js/modal.js')}}"></script>
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+    CKEDITOR.replace( 'body', {
+        filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form' });
+</script>
 @endpush
 
 @section('content')

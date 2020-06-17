@@ -33,6 +33,8 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('home', 'HomeController@index');
 Route::get('home/edit', 'HomeController@edit');
 });
+Route::post('ckeditor/image_upload', 'CKEditorController@upload')->name('upload');
+
 //Route::group(['middleware' => ['auth']], function () {
 //   // Route::get('home', 'BestController@index');
 //   // Route::get('home/edit', 'BestController@edit');
